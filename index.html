@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="main-heading">Book You Trip</h1>
+    <div class="main-container-1">
+        <div class="left-main-container">
+            <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTB8fHxlbnwwfHx8fHw%3D" alt="">
+        </div>
+        <div class="right-main-container"> 
+            <form>
+                <select style="padding: 10px; border-radius: 10px;" id="destination" name="destination">
+                    <option value="">Select a destination...</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Ukrian">Ukrian</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Afgistan">Afgistan</option> 
+                </select><br><br>
+                <label for="people">How Many Person:</label>
+                <input style="padding: 10px; border-radius: 10px;" type="number" id="people" name="people" min="1"><br><br>
+                <label for="start-date">Start Date:</label>
+                <input style="padding: 10px; border-radius: 10px;" type="date" id="start-date" name="start-date" value="" onchange="setMinEndDate()"><br><br>
+                <label for="end-date">End Date:</label>
+                <input style="padding: 10px; border-radius: 10px;" type="date" id="end-date" name="end-date" min=""><br><br>
+                <label for="description">Description:</label><br>
+                <textarea style="padding: 10px; border-radius: 10px;" id="description" name="description" rows="4" cols="50" minlength="50" maxlength="500"></textarea><br><br>
+                <button style="padding: 10px; border-radius: 10px; background-color: rgb(255, 109, 4);" type="button" onclick="bookNow()">Book Now</button>
+            </form>
+        </div>
+    </div>
+ 
+    <div id="main-container-2"></div>
+     
+    <div id="main-container-3"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
