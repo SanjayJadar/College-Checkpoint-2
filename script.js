@@ -10,6 +10,7 @@ window.onload = function() {
 
 function setMinEndDate() {
     var startDate = document.getElementById('start-date').value;
+    document.getElementById('end-date').disabled = false;
     document.getElementById('end-date').min = startDate; 
 }
 
