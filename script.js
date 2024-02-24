@@ -21,6 +21,7 @@ function bookNow() {
     let people = document.getElementById('people').value;
     let startDate = document.getElementById('start-date').value;
     let endDate = document.getElementById('end-date').value;
+<<<<<<< HEAD
     let description = document.getElementById('description').value.length; 
     if (destination && people && startDate && endDate) {
         if(description<50 || description>500){
@@ -34,6 +35,16 @@ function bookNow() {
             document.getElementById('end-date').value = '';
             document.getElementById('description').value = '';
         }
+=======
+    let description = document.getElementById('description').value;
+    if (destination && people && startDate && endDate && (description.length>=50 && description.length<=500)) {
+        alert('Booking successful!'); 
+        document.getElementById('destination').value = '';
+        document.getElementById('people').value = '';
+        document.getElementById('start-date').value = '';
+        document.getElementById('end-date').value = '';
+        document.getElementById('description').value = '';
+>>>>>>> 55572484ff6545aba102650409ba47bdfab4dc45
     } else {
         alert('Please fill in all fields.');
     }    
