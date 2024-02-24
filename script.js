@@ -22,7 +22,7 @@ function bookNow() {
     let startDate = document.getElementById('start-date').value;
     let endDate = document.getElementById('end-date').value;
     let description = document.getElementById('description').value;
-    if (destination && people && startDate && endDate && description) {
+    if (destination && people && startDate && endDate && (description.length>=50 && description.length<=500)) {
         alert('Booking successful!'); 
         document.getElementById('destination').value = '';
         document.getElementById('people').value = '';
