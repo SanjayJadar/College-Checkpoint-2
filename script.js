@@ -21,24 +21,22 @@ function bookNow() {
     let people = document.getElementById('people').value;
     let startDate = document.getElementById('start-date').value;
     let endDate = document.getElementById('end-date').value;
-    let description = document.getElementById('description').value;
-    if (destination && people && startDate && endDate && description) {
-        alert('Booking successful!'); 
-        document.getElementById('destination').value = '';
-        document.getElementById('people').value = '';
-        document.getElementById('start-date').value = '';
-        document.getElementById('end-date').value = '';
-        document.getElementById('description').value = '';
+    let description = document.getElementById('description').value.length; 
+    if (destination && people && startDate && endDate) {
+        if(description<50 || description>500){
+            alert('Description must be of length 50-500');
+        }
+        else{
+            alert('Booking successful!'); 
+            document.getElementById('destination').value = '';
+            document.getElementById('people').value = '';
+            document.getElementById('start-date').value = '';
+            document.getElementById('end-date').value = '';
+            document.getElementById('description').value = '';
+        }
     } else {
         alert('Please fill in all fields.');
-    }
-
-    console.log('hello')
-    console.log(destination)
-    console.log(people)
-    console.log(startDate)
-    console.log(endDate)
-    console.log(description)
+    }    
 }
 
 const packages = [
