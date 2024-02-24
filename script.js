@@ -1,3 +1,4 @@
+
 window.onload = function() {
     var today = new Date();
     var dd = String(today.getDate()).padStart(2, '0');
@@ -16,6 +17,11 @@ function setMinEndDate() {
 
 function bookNow() {
     
+    let destination = document.getElementById('destination').value;
+    let people = document.getElementById('people').value;
+    let startDate = document.getElementById('start-date').value;
+    let endDate = document.getElementById('end-date').value;
+    let description = document.getElementById('description').value;
     if (destination && people && startDate && endDate && description) {
         alert('Booking successful!'); 
         document.getElementById('destination').value = '';
@@ -26,6 +32,13 @@ function bookNow() {
     } else {
         alert('Please fill in all fields.');
     }
+
+    console.log('hello')
+    console.log(destination)
+    console.log(people)
+    console.log(startDate)
+    console.log(endDate)
+    console.log(description)
 }
 
 const packages = [
