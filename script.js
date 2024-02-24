@@ -4,8 +4,7 @@ window.onload = function() {
     var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
     var yyyy = today.getFullYear();
 
-    today = yyyy + '-' + mm + '-' + dd;
-    document.getElementById('start-date').value = today;
+    today = yyyy + '-' + mm + '-' + dd; 
     document.getElementById('start-date').min = today;
 };
 
@@ -15,15 +14,14 @@ function setMinEndDate() {
 }
 
 function bookNow() {
-    var destination = document.getElementById('destination').value;
-    var people = document.getElementById('people').value;
-    var startDate = document.getElementById('start-date').value;
-    var endDate = document.getElementById('end-date').value;
-    var description = document.getElementById('description').value;
-  
+    
     if (destination && people && startDate && endDate && description) {
-        alert('Booking successful!');
-        window.location.reload();
+        alert('Booking successful!'); 
+        document.getElementById('destination').value = '';
+        document.getElementById('people').value = '';
+        document.getElementById('start-date').value = '';
+        document.getElementById('end-date').value = '';
+        document.getElementById('description').value = '';
     } else {
         alert('Please fill in all fields.');
     }
