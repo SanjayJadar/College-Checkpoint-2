@@ -11,8 +11,7 @@ window.onload = function() {
 
 function setMinEndDate() {
     var startDate = document.getElementById('start-date').value;
-    document.getElementById('end-date').min = startDate;
-    document.getElementById('end-date').value = startDate;
+    document.getElementById('end-date').min = startDate; 
 }
 
 function bookNow() {
@@ -21,9 +20,10 @@ function bookNow() {
     var startDate = document.getElementById('start-date').value;
     var endDate = document.getElementById('end-date').value;
     var description = document.getElementById('description').value;
-
+  
     if (destination && people && startDate && endDate && description) {
         alert('Booking successful!');
+        window.location.reload();
     } else {
         alert('Please fill in all fields.');
     }
