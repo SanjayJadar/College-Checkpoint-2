@@ -59,6 +59,8 @@ body{
 .card{
     background-color: aquamarine;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #main-container-2 .card img{
@@ -88,5 +90,5 @@ body{
 
 #main-container-3 .card img{
     height: 220px;
-    width: 220px;
+    width: 98%;
 }

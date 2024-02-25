@@ -44,6 +44,7 @@ const packages = [
     {
         image: "https://hblimg.mmtcdn.com/content/hubble/img/gokarna/mmt/destination/m_destination_gokarna_landscape_l_400_640.jpg", 
         place: "Gokarna",
+        description: "Lakshadweep is home to serene beaches. You can expect summer heat and the temperature rising upto 32°C. Lakshadweep is also very popular among relaxation-seekers.",
         rate: '100 $',
         rating: 5
     },
@@ -166,8 +167,8 @@ const services = [
         cardsContainer2.innerHTML += 
         `<div class="card">
             <img src="${services[i].image}" alt="">
-            <h2>${services[i].place}</h2> 
-            <h3>${services[i].rate}</h3> 
+            <h3>${services[i].place}</h3> 
+            <h4>${services[i].rate}</h4> 
             <button class='service'>Try Now</button>
         </div>` 
     }
